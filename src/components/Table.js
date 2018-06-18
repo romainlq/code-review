@@ -5,6 +5,8 @@ import styled from 'styled-components';
 
 const TableContainer = styled.div`
     background: #e5f3e5;
+    flex: 1;
+    flex-flow: row wrap;
 `
 
 
@@ -13,7 +15,8 @@ class Table extends Component {
     render() {
         return (
             <TableContainer>
-                
+                <Row />
+
             </TableContainer>
         );
     }

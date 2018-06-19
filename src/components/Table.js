@@ -4,26 +4,29 @@ import Row from './Row';
 import styled from 'styled-components';
 
 const TableContainer = styled.div`
-    background: #e5f3e5;
-    flex: 1;
-    flex-flow: row wrap;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 `
 
-
-
 class Table extends Component {
+    static propTypes = {
+        data: PropTypes.array.isRequired
+    };
+
     render() {
         return (
             <TableContainer>
                 <Row />
-
+                <Row />
+                <Row />
+                <Row />
+                <Row />
             </TableContainer>
         );
     }
 }
 
-Table.propTypes = {
-    data: PropTypes.array.isRequired
-};
 
 export default Table;

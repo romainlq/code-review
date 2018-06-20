@@ -16,13 +16,14 @@ class Table extends Component {
     };
 
     render() {
+        const { data } = this.props;
+        const list = data.map((row, index) => 
+            <Row key={index} reviewer={row.reviewer} reviewed={row.reviewed} />
+        )
         return (
             <TableContainer>
-                <Row />
-                <Row />
-                <Row />
-                <Row />
-                <Row />
+                {list}
+                
             </TableContainer>
         );
     }
